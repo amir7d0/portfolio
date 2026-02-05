@@ -46,7 +46,7 @@ export const ResumeCard = ({
     >
       <Card className="flex">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="border size-16 sm:size-20 m-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -58,7 +58,7 @@ export const ResumeCard = ({
         <div className="flex-grow ml-4 items-center flex-col group">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-lg sm:text-lg">
+              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-lg sm:text-xl">
                 {title}
                 {badges && (
                   <span className="inline-flex gap-x-1">
@@ -80,11 +80,11 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+              <div className="text-sm sm:text-base tabular-nums text-muted-foreground text-right">
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {subtitle && <div className="font-sans text-sm sm:text-base">{subtitle}</div>}
           </CardHeader>
           {description && (
             <motion.div

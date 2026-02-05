@@ -3,6 +3,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import SkillsCard from "@/components/skills-card";
 import { EducationCard } from "@/components/education-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -47,7 +48,7 @@ export default function Page() {
 
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-2xl font-bold mb-4">About</h2>
+          <h2 className="text-3xl font-bold mb-4">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           {/* Increased font size to text-base/lg */}
@@ -60,7 +61,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-5">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-2xl font-bold">Work Experience</h2>
+            <h2 className="text-3xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
@@ -86,7 +87,7 @@ export default function Page() {
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-5">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-2xl font-bold">Education</h2>
+            <h2 className="text-3xl font-bold">Education</h2>
           </BlurFade>
           {DATA.education.map((education, id) => (
             <BlurFade
@@ -110,23 +111,13 @@ export default function Page() {
       </section>
 
       <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-6">
+        <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-2xl font-bold">Skills</h2>
+            <h2 className="text-3xl font-bold">Skills</h2>
           </BlurFade>
-          {/* Increased badge padding and font size */}
-          <div className="flex flex-wrap gap-2">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge 
-                  key={skill} 
-                  className="text-sm sm:text-base px-4 py-1.5"
-                >
-                  {skill}
-                </Badge>
-              </BlurFade>
-            ))}
-          </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+            <SkillsCard skills={DATA.skills} />
+          </BlurFade>
         </div>
       </section>
 
