@@ -1,0 +1,23 @@
+# 2026-08-02 — Backend Development Notes
+
+## What I worked on
+
+* Integrated **Ruff** into my Python workflow for linting and code formatting.
+* Explored the `text-extract-api` project:
+
+  * https://github.com/CatchTheTornado/text-extract-api
+  * Learned more about document extraction workflows for processing files.
+* Worked on integrating **MinIO storage** with FastAPI for managing uploaded files and object storage.
+* Connected **SQL Server** with FastAPI and explored backend database integration patterns.
+
+## What I learned
+
+* Automated code quality tools help keep Python projects maintainable.
+* Object storage is a better approach for handling large files compared to storing them directly in a database.
+* A clean separation between API, storage, and database layers makes backend systems easier to scale.
+
+## Next Steps
+
+* Improve the document processing pipeline.
+* Refine FastAPI project architecture.
+* Continue integrating storage and database components into the RAG workflow.
